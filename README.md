@@ -1,2 +1,3 @@
-# heteroscedastic-nn
-Code for "Effective Bayesian Heteroscedastic Regression with Deep Neural Networks" (NeurIPS 2023)
+# Effective Bayesian Heteroscedastic Regression with Deep Neural Networks (NeurIPS 2023)
+
+Code coming soon.
