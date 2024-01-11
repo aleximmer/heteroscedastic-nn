@@ -3,8 +3,6 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 from functools import partial
-from einops import rearrange
-from einops.layers.torch import Rearrange, Reduce
 
 from bayesian_torch.layers import LinearReparameterization
 from asdfghjkl.operations import Bias, Scale
@@ -65,7 +63,7 @@ class GaussianHead(nn.Module):
         f1, f2 = input[:, 0], self.act_fn(input[:, 1])
         return torch.stack([f1, f2], 1)
 
-        
+
 def get_head(head_str):
     if head_str == 'natural':
         return NaturalHead
@@ -163,7 +161,7 @@ class MLPVI(nn.Sequential):
         self.priorsigma1 = priorsigma1
         self.priorsigma2 = priorsigma2
         self.rep_layer = f'layer{depth}'
-        
+
         self.add_module('flatten', nn.Flatten())
         if len(hidden_sizes) == 0:  # i.e. when depth == 0.
             # Linear Model

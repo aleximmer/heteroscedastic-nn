@@ -6,7 +6,7 @@ The PDF is available [here](https://openreview.net/pdf?id=A6EquH0enk).
 ![illustration](https://github.com/aleximmer/heteroscedastic-nn/assets/7715036/1a2f2cb3-1b1c-4523-87c2-bca7a3521c78)
 
 ## Setup
-Requires installation of `python>=3.8` with an up-to-date version of pytorch.
+For experiments, we used python version 3.9 and torch version 1.12.1.
 Additional online dependencies are listed in `requirements.txt` and have to be installed with `pip install -r requirements.txt`.
 Further, `dependencies/` contain modified versions of [`laplace-torch`](https://github.com/aleximmer/Laplace) and [`asdl`](https://github.com/kazukiosawa/asdl) and have to be installed with `pip install -e dependencies/laplace` and `pip install -e dependencies/asdl`.
 To install local utilities, run `pip install -e .` in the root directory of this repository.
