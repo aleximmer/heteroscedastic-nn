@@ -3,6 +3,9 @@
 This repository contains the accompanying code for the paper "Effective Bayesian Heteroscedastic Regression with Deep Neural Networks" published at NeurIPS 2023.
 The PDF is available [here](https://openreview.net/pdf?id=A6EquH0enk).
 
+![illustration_light](https://github.com/aleximmer/heteroscedastic-nn/assets/7715036/cbda22e8-a0c7-4bb2-8bd2-fd9e19a68fac#gh-light-mode-only)
+![illustration_dark](https://github.com/aleximmer/heteroscedastic-nn/assets/7715036/96ddb916-6f42-4a55-8d7e-24eb90506971#gh-dark-mode-only)
+
 ## Setup
 Requires installation of `python>=3.8` with an up-to-date version of pytorch.
 Additional online dependencies are listed in `requirements.txt` and have to be installed with `pip install -r requirements.txt`.
