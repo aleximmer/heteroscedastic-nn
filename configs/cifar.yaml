@@ -1,0 +1,17 @@
+dataset: cifar10
+lr: 1e-1
+lr_min: 1e-4
+lr_hyp: 0.1
+lr_hyp_min: 0.1
+n_epochs_burnin: 10
+marglik_frequency: 5
+n_hypersteps: 50
+n_epochs: 100
+n_epochs_val: 100
+batch_size: 128
+device: cuda
+approx: kron
+optimizer: SGD
+activation: relu
+head_activation: softplus
+double: False
