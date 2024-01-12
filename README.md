@@ -1,4 +1,7 @@
-# Effective Bayesian Heteroscedastic Regression with Deep Neural Networks (NeurIPS 2023)
+[![arXiv](https://img.shields.io/badge/arXiv-2306.11078-b31b1b.svg)](https://arxiv.org/abs/2210.09054)
+[![Venue](https://img.shields.io/badge/venue-NeurIPS_2023-darkblue)](https://proceedings.mlr.press/v202/immer23a.html)
+
+# Effective Bayesian Heteroscedastic Regression with Deep Neural Networks
 
 This repository contains the accompanying code for the paper "Effective Bayesian Heteroscedastic Regression with Deep Neural Networks" published at NeurIPS 2023.
 The PDF is available [here](https://openreview.net/pdf?id=A6EquH0enk).
@@ -24,6 +27,9 @@ To accomplish this, the two outputs have to be `[eta_1, eta_2]` as in `hetreg.mo
 To use an existing mean-variance parameterized network, the `hetreg.models.NaturalReparamHead` can be applied and transforms the outputs accordingly.
 The remaining code is for the experiments and figures in the paper.
 To use the proposed rotated image regression datasets, see `hetreg/image_datasets.py` and their use in `run_image_regression.py`.
+
+### Models
+In `hetreg/models.py` we provide implementations of an `MLP`, `LeNet` and `ResNet18` that are compatible with our method.
 
 ## Reproducing Experiments
 
