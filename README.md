@@ -1,4 +1,4 @@
-[![Venue](https://img.shields.io/badge/venue-NeurIPS_2023-darkblue)](https://proceedings.mlr.press/v202/immer23a.html)
+[![Venue](https://img.shields.io/badge/venue-NeurIPS_2023-darkblue)](https://openreview.net/forum?id=A6EquH0enk)
 
 # Effective Bayesian Heteroscedastic Regression with Deep Neural Networks
 
