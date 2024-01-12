@@ -507,7 +507,7 @@ if __name__ == '__main__':
     parser.add_argument('--n_epochs_burnin', default=10, type=int)
     parser.add_argument('--marglik_frequency', default=50, type=int)
     parser.add_argument('--n_hypersteps', default=50, help='Number of steps on every marglik estimate (partial grad accumulation)', type=int)
-    parser.add_argument('--marglik_early_stopping', default=False, action=argparse.BooleanOptionalAction)
+    parser.add_argument('--marglik_early_stopping', default=True, action=argparse.BooleanOptionalAction)
     # others
     parser.add_argument('--device', default='cpu', choices=['cpu', 'cuda'])
     parser.add_argument('--data_root', default='data/')
