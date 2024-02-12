@@ -58,7 +58,7 @@ def valid_performance(model, test_loader, likelihood, criterion, device, mean_he
         if likelihood == 'classification':
             perf += (torch.argmax(f, dim=-1) == y).sum() / N
         elif likelihood == 'heteroscedastic_regression':
-            if mean_head is not None:
+            if mean_head is None:
                 perf += (y.squeeze() + 0.5 * f[:, 0] / f[:, 1]).square().sum() / N
             else:  # use mean-var parameterization
                 perf += (y.squeeze() - f[:, 0]).square().sum() / N
@@ -287,9 +287,9 @@ def marglik_optimization(model,
             if likelihood == 'regression':
                 epoch_perf += (f.detach() - y).square().sum() / N
             elif likelihood == 'heteroscedastic_regression':
-                if mean_head is not None:
+                if mean_head is None:
                     epoch_perf += (y.squeeze() + 0.5 * f[:, 0] / f[:, 1]).square().sum() / N
-                else:  # use mean-var parameterization
+                else:  # mean_head is natural reparam head use mean-var parameterization
                     epoch_perf += (y.squeeze() - f[:, 0]).square().sum() / N
             else:
                 epoch_perf += torch.sum(torch.argmax(f.detach(), dim=-1) == y).item() / N
