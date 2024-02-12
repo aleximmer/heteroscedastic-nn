@@ -49,12 +49,7 @@ def invsqrt_precision(M):
     -------
     M_invsqrt : torch.Tensor
     """
-    try:
-        return _precision_to_scale_tril(M)
-    except:
-        l, Q = torch.linalg.eigh
-        l = torch.clamp(l, min=1e-12)
-        return Q @ torch.diag(l ** (-0.5))
+    return _precision_to_scale_tril(M)
 
 
 def _is_batchnorm(module):
